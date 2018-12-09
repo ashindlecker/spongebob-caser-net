@@ -12,6 +12,10 @@ namespace tests
             Assert.Equal("hElLo WoRlD", SpongeCaser.ConvertToSpongeCase("Hello World"));
             Assert.Equal("hElLoWoRlD", SpongeCaser.ConvertToSpongeCase("HelloWorld"));
             Assert.Equal(" hElLo WoRlD ", SpongeCaser.ConvertToSpongeCase(" Hello World "));
+
+            //More Special Characters Test
+            Assert.Equal("[hElLo WoRlD]", SpongeCaser.ConvertToSpongeCase("[Hello World]"));
+            Assert.Equal("====bBbB====", SpongeCaser.ConvertToSpongeCase("====bbbb===="));
         }
     }
 }
