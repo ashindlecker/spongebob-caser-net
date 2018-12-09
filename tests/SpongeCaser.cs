@@ -10,7 +10,7 @@ namespace tests
         public void SpongeCaseTransformTest()
         {
             Assert.Equal("hElLoWoRlD", SpongeCaser.ConvertToSpongeCase("HelloWorld"));
-            Assert.Equal("hElLoWoRlD", SpongeCaser.ConvertToSpongeCase("helloWorld"));
+            Assert.Equal("hElLo WoRlD", SpongeCaser.ConvertToSpongeCase("hello World"));
             Assert.Equal(" hElLo WoRlD ", SpongeCaser.ConvertToSpongeCase(" Hello World "));
 
             //More Special Characters Test
