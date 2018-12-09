@@ -6,8 +6,7 @@ namespace SpongeCase
     {
         public static string ConvertToSpongeCase(string input)
         {
-            //Counter to keep track of each normal letter [A-Z][a-z] that was found
-            var normalCharacterCounter = 0;
+            var capitilizeCharacterFlag = true;
 
             var convertedStringToBuild = "";
 
@@ -18,8 +17,8 @@ namespace SpongeCase
                 var currentCharacter = input[i].ToString();
                 if (specialCharacterRegex.IsMatch(currentCharacter))
                 {
-                    normalCharacterCounter++;
-                    if (normalCharacterCounter % 2 == 0)
+                    capitilizeCharacterFlag = !capitilizeCharacterFlag;
+                    if (capitilizeCharacterFlag)
                     {
                         convertedStringToBuild += input[i].ToString().ToUpper();
                     }
