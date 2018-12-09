@@ -9,11 +9,9 @@ namespace tests
         [Fact]
         public void SpongeCaseTransformTest()
         {
-            const string input = "Hello world";
-            const string expectedOutputFromInput = "hElLo WoRlD";
-            var actualOutputFromInput = SpongeCaser.ConvertToSpongeCase(input);
-
-            Assert.Equal(expectedOutputFromInput, actualOutputFromInput);
+            Assert.Equal("hElLo WoRlD", SpongeCaser.ConvertToSpongeCase("Hello World"));
+            Assert.Equal("hElLoWoRlD", SpongeCaser.ConvertToSpongeCase("HelloWorld"));
+            Assert.Equal(" hElLo WoRlD ", SpongeCaser.ConvertToSpongeCase(" Hello World "));
         }
     }
 }
