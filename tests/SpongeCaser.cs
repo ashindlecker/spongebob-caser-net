@@ -18,6 +18,7 @@ namespace tests
             Assert.Equal("====bBbB====", SpongeCaser.ConvertToSpongeCase("====bbbb===="));
 
             //Test of starting with a capital letter by using an optional parameter
+            Assert.Equal("HeLlO wOrLd", SpongeCaser.ConvertToSpongeCase("hello World", true));
             Assert.Equal("HeLlO wOrLd", SpongeCaser.ConvertToSpongeCase("Hello World", true));
         }
     }
