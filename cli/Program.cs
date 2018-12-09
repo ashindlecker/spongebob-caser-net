@@ -6,8 +6,7 @@ namespace SpongeCase
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(SpongeCaser.ConvertToSpongeCase("Hello World!"));
         }
     }
 }

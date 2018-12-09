@@ -20,11 +20,11 @@ namespace SpongeCase
                     capitilizeCharacterFlag = !capitilizeCharacterFlag;
                     if (capitilizeCharacterFlag)
                     {
-                        convertedStringToBuild += input[i].ToString().ToUpper();
+                        convertedStringToBuild += currentCharacter.ToUpper();
                     }
                     else
                     {
-                        convertedStringToBuild += input[i].ToString().ToLower();
+                        convertedStringToBuild += currentCharacter.ToLower();
                     }
                 }
                 else {
