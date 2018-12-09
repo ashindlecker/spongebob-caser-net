@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace SpongeCase
 {
     public class SpongeCaser
@@ -9,18 +11,25 @@ namespace SpongeCase
 
             var convertedStringToBuild = "";
 
+            var specialCharacterRegex = new Regex("^[a-zA-Z]*$");
+
             for (var i = 0; i < input.Length; i++)
             {
-                var currentCharacter = input[i];
-
-                if(currentCharacter != ' ')
+                var currentCharacter = input[i].ToString();
+                if (specialCharacterRegex.IsMatch(currentCharacter))
+                {
                     normalCharacterCounter++;
-
-                if(normalCharacterCounter % 2 == 0){
-                    convertedStringToBuild += input[i].ToString().ToUpper();
+                    if (normalCharacterCounter % 2 == 0)
+                    {
+                        convertedStringToBuild += input[i].ToString().ToUpper();
+                    }
+                    else
+                    {
+                        convertedStringToBuild += input[i].ToString().ToLower();
+                    }
                 }
                 else {
-                    convertedStringToBuild += input[i].ToString().ToLower();
+                    convertedStringToBuild += currentCharacter;
                 }
             }
             return convertedStringToBuild;
